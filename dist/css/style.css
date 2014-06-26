@@ -1,0 +1,498 @@
+@font-face{
+	font-family:PTSans-Narrow;
+	src:url(../../fonts/PTN57F.ttf) format('truetype');
+}
+
+@font-face{
+	font-family: olioscript;
+	src:url(../../fonts/OleoScript-Regular.ttf) format('truetype');
+}
+
+@font-face{
+	font-family: eaglelake;
+	src:url(../../fonts/EagleLake-Regular.ttf) format('truetype');
+}
+
+@font-face{
+	font-family: muli-light;
+	src:url(../../fonts/Muli-Light.ttf) format('truetype');
+}
+
+@font-face{
+	font-family: mavenspro-bold;
+	src:url(../../fonts/MavenPro-Bold.ttf) format('truetype');
+}
+
+@font-face{
+	font-family: pt-serif;
+	src:url(../../fonts/PT_Serif-Web-Regular.ttf) format('truetype');
+}
+
+@font-face{
+	font-family: mavenspro;
+	src:url(../../fonts/MavenPro-Regular.ttf) format('truetype');
+}
+
+@font-face{
+	font-family: ptsans-caption;
+	src:url(../../fonts/pt-sans.ttf) format('truetype');
+}
+
+@font-face{
+	font-family: cinzel-decorative;
+	src:url(../../fonts/CinzelDecorative-Regular.ttf) format('truetype');
+}
+
+@font-face{
+	font-family: pt-sans-regular;
+	src:url(../../fonts/PT_Sans-Web-Regular.ttf) format('truetype');
+}
+
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+@-webkit-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+@-o-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+.row-tp-reg{
+	background-image: url('../../images/cloud-head.png');
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	animation: animatedBackground 40s linear infinite;
+	-o-animation: animatedBackground 40s linear infinite;
+	-moz-animation: animatedBackground 40s linear infinite;
+	-webkit-animation: animatedBackground 40s linear infinite;
+	
+}
+
+.nav-custom>li>a{
+	font-family: PTSans-Narrow;
+	color: #fff;
+	font-size: 25px;
+}
+
+.nav-custom>li>a:hover{
+	background-color: transparent;
+	color: #e89f05;
+}
+
+.navbar-custom{
+	background-color: transparent;
+	z-index: 2;
+}
+
+.img-logo{
+	width: 8%;
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+
+.row-main-form{
+	background-image: url('../../images/background.png');
+	background-repeat: repeat;
+	min-height: 500px;
+	opacity: 1.6;
+}
+
+.inner-form{
+	width: 70%;
+	margin: 50px auto;
+	border: 1px solid #b8b8b8;
+	background-color: rgba(255,255,255,0.38);
+}
+
+.head-reg{
+	text-align: center;
+	font-family: olioscript;
+	color: #076db4;
+}
+
+.line-img{
+	border-bottom: 2px solid #7e7d7d;
+	min-height: 36px;
+	margin: 0 10px;
+}
+
+.head-reg-2{
+	text-align: center;
+	font-family: olioscript;
+}
+
+.img-decoration{
+	width: 40%;
+	margin: 20px auto;
+}
+
+.form-container{
+	width: 60%;
+	margin: 10px auto;
+	padding-top: 20px;
+}
+
+.label-form{
+	font-family: eaglelake;
+	font-size: 19px;
+	text-align: left !important;
+}
+
+.form-custom{
+	padding: 20px;
+	-webkit-box-shadow: inset 0px 1px 16px 5px rgba(206,206,206,1);
+	-moz-box-shadow: inset 0px 1px 16px 5px rgba(206,206,206,1);
+	box-shadow: inset 0px 1px 16px 5px rgba(206,206,206,1);
+}
+
+.main-form-cont{
+	border-top: 2px solid #7e7d7d;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.btn-custom{
+	background-image: none !important;
+	font-size: 18px;
+	float: right;
+	font-family: ptsans-caption;
+}
+
+.home-head-btm{
+	color: #076db4;
+	font-family: mavenspro-bold;
+	text-align: center;
+	margin-top: 7px;
+}
+
+.row-deco-btm{
+	margin-top: 50px;
+	padding: 0 10%;
+	margin-bottom: 80px;
+}
+
+.row-footer{
+	background-color: #095c95;
+	color: #fff;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+.head-footer{
+	font-family: mavenspro;
+	text-transform: uppercase;
+	width: 60%;
+	border-bottom: 2px solid #fff;
+	line-height: 1.6;
+}
+
+.para-footer{
+	font-family: PTSans-Narrow;
+	font-size: 19px;
+}
+
+.go-btn {
+	background-color: #01375c !important;
+	border: 1px solid #01375c !important;
+	background-image: none;
+}
+
+.row-footer-company{
+	background-color: #01375C;
+	color: #FFFFFF;
+	padding-bottom: 5px;
+}
+
+.mrgn-nul{
+	margin: 0;
+}
+
+.head-footer-company{
+	text-align: center;
+	font-family: PTSans-Narrow;
+	font-size:	18px;
+}
+
+.row-tp-home{
+	background-image: url('../../images/hm-bg.png');
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	animation: animatedBackground 40s linear infinite;
+	-o-animation: animatedBackground 40s linear infinite;
+	-moz-animation: animatedBackground 40s linear infinite;
+	-webkit-animation: animatedBackground 40s linear infinite;
+	
+}
+
+.img-heaven{
+	width: 100%;
+	margin-top: -72px;
+	z-index: 1;
+}
+
+.img-hvn{
+	margin-top: -20px;
+}
+
+.banner-tp{
+	margin-left: -15px;
+	margin-right: -15px;
+	position: relative;
+}
+
+.btn-banner{
+	width: 256px;
+	margin: 0 auto;
+}
+
+.btn-custom-hm-bnr{
+	color: #fff;
+	background-color: rgba(54, 134, 173, 0.7);
+	font-family: cinzel-decorative;
+	font-size: 21px;
+}
+
+.logo-pos-hm{
+	position: absolute;
+	top: 40%;
+	left: 0;
+	width: 100%;
+}
+
+.para-home{
+	font-family: pt-serif;
+	font-size: 28px;
+	text-align: center;
+	color: #6b5d5e;
+}
+
+.main-home-cont{
+	border-top: 2px solid #7e7d7d;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.container-bx-home{
+	position: relative;
+}
+
+.img-bx{
+}
+
+.txt-bx{
+	background-color: rgba(40, 43, 41, 0.7);
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: none;
+	left: 0;
+}
+
+.hd-bx{
+	margin: 0;
+	padding: 10px;
+	padding-bottom: 0px;
+	padding-top: 5px;
+	font-family: pt-serif;
+	font-size: 22px;
+}
+
+.para-bx{
+	padding: 10px;
+	padding-top: 0;
+	font-family: pt-serif-italic;
+	font-size: 17px;
+	padding-bottom: 0px;
+	margin-bottom: 5px;
+}
+
+.row-bx{
+	margin-top: 30px;
+}
+
+.head-home-2{
+	text-align: center;
+	font-family: olioscript;
+	font-size: 48px;
+}
+
+.cont-bx-img-abt{
+	margin-top: 18px;
+	position: relative;
+}
+
+.hd-abt{
+	font-family: mavenspro;
+	color: #fff;
+	font-size: 39px;
+	text-align: center;
+	border-bottom: 2px solid #fff;
+	padding-bottom: 12px;
+}
+.visible {
+	opacity: 1;
+}
+.hidden {
+	opacity: 0;
+}
+.para-abt{
+	color: #fff;
+	text-align: center;
+	font-family: muli-light;
+}
+
+.line-img-abt{
+	border-bottom: 2px solid #fff;
+	min-height: 36px;
+	margin: 0 10px;
+}
+
+.hd-abt-learn{
+	font-family: mavenspro;
+	color: #fff;
+	font-size: 26px;
+	text-align: center;
+	padding-bottom: 12px;
+}
+
+.txt-abt-bx{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: ease-in 0.2s all 0s;
+}
+
+.img-abt{
+}
+
+.txt-abt-bx:hover{
+	opacity: 0.99;
+}
+
+.home-head-team{
+	text-align: center;
+	color: #076db4;
+	font-family: olioscript;
+	font-size: 30px;
+	margin-top: 11px;
+}
+
+.btm-team-hm{
+	margin-bottom: 70px;
+}
+
+.btn-custom-login{
+	background-image: none !important;
+	font-size: 18px;
+	font-family: ptsans-caption;
+}
+
+.form-custom-log{
+	padding: 20px;
+	background-color: #d4b255;
+	-webkit-box-shadow: inset 1px 0px 38px 5px rgba(128,92,0,1);
+	-moz-box-shadow: inset 1px 0px 38px 5px rgba(128,92,0,1);
+	box-shadow: inset 1px 0px 38px 5px rgba(128,92,0,1);
+}
+
+.form-custom-log:focus{
+	border-color: #805c00;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(128, 92, 0, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(128, 92, 0, 0.6);
+}
+
+.frgt-pass{
+	font-family: pt-sans-regular;
+	font-size: 1.5em;
+	display: block;
+	text-align: center;
+	width: 170px;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 70px;
+}
+
+.frgt-pass:hover{
+	text-decoration: none;
+}
+
+.inner-form-cntctus{
+	width: 70%;
+	margin: 50px auto;
+	border: 1px solid #b8b8b8;
+	background-color: rgba(233, 167, 5, 0.38);
+}
+
+.lbl-form-contact{
+	font-family: PTSans-Narrow;
+	font-size: 1.6em;
+}
+
+.btn-custom-contact{
+	background-image: none !important;
+	font-size: 21px;
+	font-family: PTSans-Narrow;
+	background-color: #024471;
+	width: 136px;
+	border-radius: 0px;
+	margin-top: 20px;
+}
+
+.slct-tpcs{
+	font-family: olioscript;
+	font-size: 1.5em;
+}
+
+@media(max-width:600px){
+	
+	.home-head-team{
+		font-size: 20px;
+	}
+	
+	.hd-abt{
+		font-size: 20px;
+		padding-bottom: 5px;
+	}
+	
+	.para-abt{
+		font-size: 12px
+	}
+	
+	.hd-abt-learn{
+		font-size: 18px;
+		padding-bottom: 5px;
+	}
+	
+}
+
+
+@media(min-width: 768px) and (max-width: 1199px){
+	
+	.hd-abt{
+		font-size: 20px;
+		padding-bottom: 5px;
+	}
+	
+	.para-abt{
+		font-size: 12px
+	}
+	
+	.hd-abt-learn{
+		font-size: 18px;
+		padding-bottom: 5px;
+	}
+	
+}
