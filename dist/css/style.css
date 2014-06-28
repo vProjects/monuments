@@ -535,6 +535,21 @@
 	margin: 0 auto;
 	margin-bottom: 100px;
 }
+.reg-info {
+    font-family: eaglelake;
+    font-size: 15px;
+    padding-bottom: 19px;
+    border-bottom: 2px solid #7e7d7d;
+    margin-bottom: 17px;
+    margin-top: 20px;
+    color: #000;
+}
+.reg-info span{
+	font-family: eaglelake;
+	font-size: 12px;
+	float: left;
+	
+}
 
 @media(max-width:600px){
 	

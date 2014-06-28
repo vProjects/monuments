@@ -55,5 +55,9 @@
 	</div>
 	<script type="text/javascript" src="dist/js/custom.js"></script>
 	<script type="text/javascript" src="dist/js/viewportchecker.js"></script>	
+	<script type="text/javascript" src="dist/js/bootstrap-datepicker.js"></script>
+	<script>
+		$('.datepicker').datepicker()
+	</script>
 </body>
 </html>
