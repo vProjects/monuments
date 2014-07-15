@@ -15,7 +15,7 @@
 			}
 			else if($url == 'wrong key') {
 				//if there is wrong key send user to 404 page
-				header('location: 404.html');
+				header('location: 404.php');
 			}
 			else {
 				
@@ -25,7 +25,7 @@
 			
 		}
 		else {
-			echo 'I am not set';
+			header('Location: index.php');
 		}
 	}
 	
@@ -112,13 +112,13 @@
 								 <div class="form-group">
 								    <label class="col-md-6 control-label label-form">Born</label>
 								    <div class="col-md-6">
-								      <input type="text" class="datepicker form-control form-custom-log" name="bornDate">
+								      <input type="text" class="datepicker form-control form-custom-log" value="2014-12-02" id="mydate1" name="bornDate">
 								    </div>
 								 </div>
 								 <div class="form-group">
 								    <label class="col-md-6 control-label label-form">Died</label>
 								    <div class="col-sm-6">
-								      <input type="text" class="datepicker form-control form-custom-log" name="diedDate" >
+								      <input type="text" class="datepicker form-control form-custom-log" value="2014-12-02" id="mydate2" name="diedDate" >
 								    </div>
 								 </div>
 								 <div class="form-group">

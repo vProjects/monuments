@@ -1,11 +1,14 @@
-<?php include('v-includes/header.php'); ?>
+<?php
+ 	session_start();
+	include('v-includes/header.php'); 
+?>
 	<!-- registration form ends -->
 	
 	<div class="row row-main-form mrgn-nul">
 		<div class="col-sm-12">
 			<div class="container">
 				
-				<div class="inner-form-cntctus">
+				<div class="inner-form">
 					<div class="row">
 						<div class="col-xs-4">
 							<div class="line-img">
@@ -13,7 +16,7 @@
 						</div>
 						<div class="col-xs-4">
 							<h3 class="head-reg">
-								Share Profile
+								Contact Us
 							</h3>
 						</div>
 						<div class="col-xs-4">
@@ -22,7 +25,7 @@
 						</div>
 					</div>
 					<h1 class="head-reg-2">
-						Lorem ipsumlorem ip sum lorem ipsumlorem <span class="head-reg">ip</span>
+						We are always looking for feedback, and we would love to hear <span class="head-reg">from you</span>
 					</h1>
 					<div class="img-decoration">
 						<img src="images/decoration.png" class="img-responsive" />

@@ -8,28 +8,27 @@
 					<div class="col-sm-4 fade-in-left">
 						<h3 class="head-footer">Contact</h3>
 						<p class="para-footer">
-							Phone: 000 000 000
+							Phone: (612) 704-1348
 						</p>
 						<p class="para-footer">
-							Email: lorem@ipsumlorem.com
+							Email: thepeople@livingmonument.org
 						</p>
 						<p class="para-footer">
-							Address: 000 Lorem ip, 000 sumlo
-							loremipsum 111.
+							Address: 103 South Whitney Street, Marshall MN, 56258
 						</p>
 					</div>
 					<div class="col-sm-4">
 						<h3 class="head-footer">
 							Follow
 						</h3>
-						<div class="row">
-							<div class="col-sm-2 col-xs-3">
+						<div class="social-div-footer">
+							<div class="each-social">
 								<img class="img-responsive" src="images/twitter.png" />
 							</div>
-							<div class="col-sm-2 col-xs-3">
+							<div class="each-social">
 								<img class="img-responsive" src="images/facebook.png" />
 							</div>
-							<div class="col-sm-2 col-xs-3">
+							<div class="each-social">
 								<img class="img-responsive" src="images/linkedin.png" />
 							</div>
 						</div>
@@ -39,7 +38,7 @@
 							About Us
 						</h3>
 						<p class="para-footer">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+							At Eternal Legacy we are always striving to connect our past and present to the future.
 						</p>
 					</div>
 				</div><!-- inner row footer -->
@@ -50,14 +49,23 @@
 	
 	<div class="row mrgn-nul row-footer-company">
 		<div class="col-sm-12">
-			<h3 class="head-footer-company">COPYRIGHT @YOUR COMPANY , LLC ALL RIGHTS RESERVED</h3>
+			<h3 class="head-footer-company">COPYRIGHT @Eternal Legacy , LLC ALL RIGHTS RESERVED</h3>
 		</div>
 	</div>
 	<script type="text/javascript" src="dist/js/custom.js"></script>
 	<script type="text/javascript" src="dist/js/viewportchecker.js"></script>	
 	<script type="text/javascript" src="dist/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="dist/js/upload.js"></script>
+	<script type="text/javascript" src="dist/js/jquery.Jcrop.min.js"></script>
 	<script>
-		$('.datepicker').datepicker()
-	</script>
+	$('#mydate1').datepicker({
+				format: 'yyyy-mm-dd'
+			});
+	$('#mydate2').datepicker({
+				format: 'yyyy-mm-dd'
+			});		
+		//$('.datepicker').datepicker();
+		
+	</script>		
 </body>
 </html>

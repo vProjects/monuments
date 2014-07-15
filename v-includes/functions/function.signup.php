@@ -1,5 +1,5 @@
 <?php
-
+	session_start();
 	
 	include('../class/class.getinfo.php');
 	
@@ -23,12 +23,14 @@
 			//calls a function which saves user and his ancestor
 			$saveValues = $getinfo->saveUserAndAncestor($GLOBALS['_POST'],$user);
 			
-			header('location: editprofile.php?id='.$_POST['key']);
+			$_SESSION['username'] = $GLOBALS['_POST']['email'];
+			
+			header('location: ../../manange.php?id='.$_POST['key']);
 			
 			
 		}
 		else {
-			echo 'something is wrong';
+			header('location: ../../index.php');
 		}
 		
 	} 

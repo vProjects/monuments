@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -48,6 +49,17 @@
 				        <li><a href="index.php">HOME</a></li>
 				        <li><a href="aboutus.php">ABOUT</a></li>
 				        <li><a href="contactus.php">CONTACT</a></li>
+				        <?php 
+				        if(isset($_SESSION['username'])){
+				        	echo '<li><a href="manage.php">MANAGE</a></li>';
+							echo '<li><a href="v-includes/functions/function.logout.php">LOGOUT</a></li>';
+				        }
+						else {
+							echo '<li><a href="login.php">LOGIN</a></li>';	
+						}
+				        	
+						?>	
+
 				      </ul>
 				    </div><!-- /.navbar-collapse -->
 				  </div><!-- /.container-fluid -->
@@ -62,7 +74,7 @@
 				</div><!-- img-logo -->
 				<div class="btn-banner">
 					<a href="#" class="btn btn-custom-hm-bnr fade-in-left">
-						LIVING MONUMENTS
+						LIVING MONUMENT
 					</a>
 				</div><!-- btn-banner -->
 			</div><!-- logo-pos-home -->
@@ -83,7 +95,7 @@
 						</div>
 						<div class="col-xs-6 col-sm-2">
 							<h3 class="head-reg fade-in-left">
-								Who We Are
+								What is a Living Monument
 							</h3>
 						</div>
 						<div class="col-xs-3 col-sm-5">
@@ -92,7 +104,7 @@
 						</div>
 					</div>
 					<p class="para-home fade-in-right">
-						Here at Eternal Legacy we know that nothing has been do to enhance headstones in
+						A personalized memorial page, set up by friends and family, to preserve a legacy for generations.
 					</p>
 					<div class="img-decoration">
 						<img src="images/decoration.png" class="img-responsive" />
@@ -149,7 +161,7 @@
 						</div>
 						<div class="col-xs-6 col-sm-2">
 							<h3 class="head-reg fade-in-left">
-								What We Do
+								Why Are We Doing This?
 							</h3>
 						</div>
 						<div class="col-xs-3 col-sm-5">
@@ -158,7 +170,7 @@
 						</div>
 					</div>
 					<h1 class="head-home-2 fade-in-right">
-						A quick scan of the code will bring  <span class="head-reg">you </span>
+						We realize that nothing has been done to actually enhance headstones in thousands of years.  At Eternal Legacy we are always striving to create the best, <span class="head-reg">most effective way to ensure your legacy for future generations. </span>
 					</h1>
 					<div class="img-decoration">
 						<img src="images/decoration.png" class="img-responsive" />
@@ -248,10 +260,10 @@
 									<img src="images/team1.png" class="img-responsive img-bx" />
 									<div class="txt-bx">
 										<h3 class="hd-bx">
-											Lorem Ipsumlorem
+											Mike Clawson
 										</h3>
 										<p class="para-bx">
-											<i>Lorem Ipsum</i>
+											<i>C.E.O.</i>
 										</p>
 									</div><!-- txt-bx -->
 								</div>
@@ -261,10 +273,10 @@
 									<img src="images/team2.png" class="img-responsive img-bx" />
 									<div class="txt-bx">
 										<h3 class="hd-bx">
-											Lorem Ipsumlorem
+											Joshua Toney
 										</h3>
 										<p class="para-bx">
-											<i>Lorem Ipsum</i>
+											<i>C.O.O.</i>
 										</p>
 									</div><!-- txt-bx -->
 								</div>
@@ -274,10 +286,10 @@
 									<img src="images/team3.png" class="img-responsive img-bx" />
 									<div class="txt-bx">
 										<h3 class="hd-bx">
-											Lorem Ipsumlorem
+											Josh Ranslem
 										</h3>
 										<p class="para-bx">
-											<i>Lorem Ipsum</i>
+											<i>Sales Manager</i>
 										</p>
 									</div><!-- txt-bx -->
 								</div>

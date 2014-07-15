@@ -97,7 +97,7 @@
 				
 				//insert ansestor
 				$querySaveAncestor = $this->link->prepare("INSERT INTO `ancestor` (`firstname`,`middlename`,`lastname`,`nickname`,
-																					`born`,`died`,`Obituary`,`Biography`) VALUES(?,?,?,?,?,?,?,?)");
+																					`born`,`died`,`Obituary`,`Biography`, `key`) VALUES(?,?,?,?,?,?,?,?,?)");
 					$values = array(
 									$ancestor['firstName'],
 									$ancestor['middleName'],
@@ -106,17 +106,18 @@
 									$ancestor['bornDate'],
 									$ancestor['diedDate'],
 									$ancestor['Obituary'],
-									$ancestor['Biography']
+									$ancestor['Biography'],
+									$ancestor['key'],
 									);		
 				$querySaveAncestor->execute($values);
 				$countSaveAncestor = $querySaveAncestor->rowCount();
 				
 				//update key
 				$key = $ancestor['key'];
-				$queryUpdateKey = $this->link->prepare("update uniqueKey set url = '$key' where uniqueKey = '$key'");
+				$queryUpdateKey = $this->link->prepare("update uniquekey set url = '$key' where uniqueKey = '$key'");
 				$queryUpdateKey->execute();
 				
-				echo $countUpdateKey = $queryUpdateKey->rowCount();
+				$countUpdateKey = $queryUpdateKey->rowCount();
 				
 				$saveValues = array(
 									'usersave' => $countSaveUser,
@@ -127,7 +128,151 @@
 				return $saveValues;
 			
 		 }
+		 /*
+		  * function to get ansestor details
+		  */
+		 
+		 function getAncestorDetails($email) {
+		 	$query = $this->link->prepare("select `key` from users where `email` = '$email'");
+			$query->execute();
+			$values = $query->fetchALL(PDO::FETCH_ASSOC);
+			$key = $values[0]['key'];
+			
+			$queryAncestor = $this->link->prepare("select * from ancestor where `key` = '$key'");
+			$queryAncestor->execute();
+			$ansestorValues = $queryAncestor->fetchALL(PDO::FETCH_ASSOC);
+			return $ansestorValues;
+			
+		 	
+		 }
+		 
+		 
+		 /*
+		  * function to get ancestor details using key
+		  */
+		 
+		 function getAncestorDetailsByKey($key) {
+			$queryAncestor = $this->link->prepare("select * from ancestor where `key` = '$key'");
+			$queryAncestor->execute();
+			$ansestorValues = $queryAncestor->fetchALL(PDO::FETCH_ASSOC);
+			return $ansestorValues;
+		 	
+		 } 
 		
+		/*
+		 * function to log in
+		 */
+		function login($email, $password) {
+			$query = $this->link->prepare("select * from users where `email` = '$email' and `password` = '$password'");
+			$query->execute();
+			
+			$result = $query->rowCount();
+			return $result;
+		}
+		
+		/* 
+		 * function to update Ancestor basic profile
+		 */
+		 function updateProfile($profileValues){
+		 	$email = $_SESSION['username'];
+		 	$query = $this->link->prepare("select `key` from users where `email` = '$email'");
+			$query->execute();
+			$values = $query->fetchALL(PDO::FETCH_ASSOC);
+			$key = $values[0]['key'];
+			
+			
+			print_r($profileValues);
+			$firstName = $profileValues['firstName'];
+			$middleName = $profileValues['middleName'];
+			$lastName = $profileValues['lastName'];
+			$nickName = $profileValues['nickname'];
+			$bornDate = $profileValues['bornDate'];
+			$diedDate = $profileValues['diedDate'];
+			$obituary = $profileValues['Obituary'];
+			$bio = $profileValues['Biography'];
+			
+		
+
+			//update ancestor basic info
+			$queryAncestor = $this->link->prepare("UPDATE `ancestor` SET `firstname`='$firstName',
+																		`middlename`='$middleName',
+																		`lastname`='$lastName',
+																		`nickname`='$nickName',
+																		`born`='$bornDate',
+																		`died`='$diedDate',
+																		`Obituary`='$obituary',
+																		`Biography`='$bio' where `key`='$key'");
+			$queryAncestor->execute();
+			
+			
+			return $queryAncestor->rowCount();
+								
+		 }
+
+			
+		/*
+		 * function to get the key for a user 	
+		*/
+		
+		function getUserKey($email) {
+		 	$query = $this->link->prepare("select `key` from users where `email` = '$email'");
+			$query->execute();
+			$values = $query->fetchALL(PDO::FETCH_ASSOC);
+			$key = $values[0]['key'];
+			
+			return $key;			
+			
+		}
+		 
+		   
+		/*
+		 * function to save users profile picture
+		 */
+		 
+		 function saveProfileImage($email, $imageName){
+		 	$key = $this->getUserKey($email);
+			
+			$query = $this->link->prepare("select profileimage from ancestor where `key` = '$key'");
+			$query->execute();
+			$values = $query->fetchALL(PDO::FETCH_ASSOC);
+			$profileImage = $values[0]['profileimage'];
+			
+			/*
+			 * here I am taking two cased where the profiel image is set and in another one
+			 * profile image is not set. Although for both of them I am updating the image but this 
+			 * can be used in future
+			 */ 
+			
+			if($profileImage != null) {
+					
+				$this->UpdateProfileImageName($imageName,$key);
+			}
+			else {
+				$this->UpdateProfileImageName($imageName,$key);
+			}
+			
+		 }
+		 
+		 /*
+		  * function to update the profile image of the ancestor
+		  */
+		 function UpdateProfileImageName($imageName,$key) {
+		 	$query = $this->link->prepare("update ancestor set `profileimage` = '$imageName' where `key` = '$key'");
+			$query->execute();
+			
+		 }
+		 
+		 /*
+		  * function to update ancestor profile video
+		  */
+		  function updateAncestorVideo($key,$videoID) {
+		  	$query = $this->link->prepare("update ancestor set `videoid` = '$videoID' where `key` = '$key'");
+			$query->execute();
+		  }
+		 
+		
+		 
+		 
 		
 		
 	}

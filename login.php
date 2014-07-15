@@ -1,5 +1,12 @@
-<?php include('v-includes/header.php'); ?>
+<?php 
 	
+	include('v-includes/header.php'); 
+	
+	if(isset($_SESSION['username'])){
+		header('location: editprofile.php');
+	}
+	
+?>		
 	<div class="row row-main-form mrgn-nul">
 		<div class="col-sm-12">
 			<div class="container">
@@ -26,17 +33,17 @@
 					
 					<div class="main-form-cont">
 						<div class="form-container">
-							<form class="form-horizontal" role="form" method="post">
+							<form class="form-horizontal" action="v-includes/functions/function.login.php" role="form" method="post">
 								 <div class="form-group">
 								    <label class="col-md-6 control-label label-form">Username</label>
 								    <div class="col-md-6">
-								      <input type="text" class="form-control form-custom-log" >
+								      <input type="text" name="email" class="form-control form-custom-log" >
 								    </div>
 								 </div>
 								 <div class="form-group">
 								    <label class="col-md-6 control-label label-form">Password</label>
 								    <div class="col-md-6">
-								      <input type="password" class="form-control form-custom-log" >
+								      <input type="password" name="password" class="form-control form-custom-log" >
 								    </div>
 								 </div>
 								 <div class="form-group">
