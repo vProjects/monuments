@@ -577,6 +577,12 @@
 	height: 100%;
 }*/
 
+.delete_img_upload{
+	cursor:pointer;
+	color:#F00;
+	margin-top:10px;
+}
+
 @media(max-width:600px){
 	
 	.home-head-team{

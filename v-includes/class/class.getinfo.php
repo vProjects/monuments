@@ -271,6 +271,57 @@
 		  }
 		 
 		
+		
+		/*
+		- method for inserting values to given table
+		- Auth Dipanjan  
+		*/
+		function insertValue($table_name,$column_name,$column_values){
+			//declaring variables for preparing the query
+			$column = "";
+			$value = "";
+			for($i=0;$i<count($column_name);$i++)
+			{
+				$column = $column."`".$column_name[$i]."`, ";
+				$value = $value."?,"; 
+			}
+			//modifying the string for column name and values
+			$column = substr($column,0,-2);
+			$value = substr($value,0,-1);
+			$query = $this->link->prepare("INSERT INTO `$table_name`($column) VALUES ($value)");
+			$query->execute($column_values);
+			return $query->rowCount();
+		}
+		
+		/*
+		- function to get the values from table with multiple conditions
+		- auth: Dipanjan
+		*/
+		function getValueMultipleCondtn($table_name,$col_value,$column_name,$column_values)
+		{
+			//declaring variables for preparing the query
+			$column = "";
+			$value = "";
+			
+			for($i=0;$i<count($column_name);$i++)
+			{
+				$column = $column." AND ".$column_name[$i]."='".$column_values[$i]."'";
+				
+			}
+			$column = substr($column,5);
+			
+			$query = $this->link->prepare("SELECT ". $col_value ." from ". $table_name ." where ". $column);
+			$query->execute();
+			$rowcount = $query->rowCount();
+			if($rowcount > 0){
+				$result = $query->fetchAll(PDO::FETCH_ASSOC);
+				return $result;
+			}
+			else{
+				return $rowcount;
+			}
+			
+		}
 		 
 		 
 		

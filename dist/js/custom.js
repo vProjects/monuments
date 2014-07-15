@@ -27,6 +27,21 @@ $(document).ready(function(){
     offset: 60    
    }); 
 	
+	
+	//adding another image upload option
+	$(document).on('click', '#add_img', function(){ 
+		//getting child of image section
+		var length = $('#gal_img').children().length;
+		var next_child = parseInt(length) + 1;
+		var appending_text = '<div class="form-group"><label class="col-md-6 control-label label-form">Gallary Pic </label><div class="col-md-6"><input type="file" name="file[]"><span class="delete_img_upload">(-)Delete</span></div></div>';
+		$('#gal_img').append(appending_text);
+	});
+	
+	//deleting image link
+	$(document).on('click', '.delete_img_upload', function(){ 
+		//deleting the form group
+		$(this).parent().parent().replaceWith('');
+	});
     
     
     

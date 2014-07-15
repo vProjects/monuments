@@ -51,7 +51,7 @@
 					
 					<div class="main-form-cont">
 						<div class="form-container">
-							<form class="form-horizontal" role="form" method="post">
+							<form class="form-horizontal" action="v-includes/functions/function.uploadImage.php" role="form" method="post" enctype="multipart/form-data">
 								 <div class="form-group">
 								    <label class="col-md-6 control-label label-form">Profile Pic</label>
 								    <div class="col-md-6">
@@ -66,68 +66,29 @@
 								      
 								    </div>
 								 </div>
+                                 <div id="gal_img">
+                                     <div class="form-group">
+                                        <label class="col-md-6 control-label label-form">Gallary Pic </label>
+                                        <div class="col-md-6">
+                                          <input type="file" name="file[]">
+                                        </div>
+                                     </div>
+                                     <div class="form-group">
+                                        <label class="col-md-6 control-label label-form">Gallary Pic </label>
+                                        <div class="col-md-6">
+                                          <input type="file" name="file[]">
+                                        </div>
+                                     </div>
+                                     <div class="form-group">
+                                        <label class="col-md-6 control-label label-form">Gallary Pic </label>
+                                        <div class="col-md-6">
+                                          <input type="file" name="file[]">
+                                        </div>
+                                     </div>
+                                 </div>
 								 <div class="form-group">
-								    <label class="col-md-6 control-label label-form">Gallary Pic 1</label>
-								    <div class="col-md-6">
-								      <input type="file" >
-								    </div>
-								 </div>
-								 <div class="form-group">
-								    <label class="col-md-6 control-label label-form">Gallary Pic 2</label>
-								    <div class="col-md-6">
-								      <input type="file" >
-								    </div>
-								 </div>
-								 <div class="form-group">
-								    <label class="col-md-6 control-label label-form">Gallary Pic 3</label>
-								    <div class="col-md-6">
-								      <input type="file" >
-								    </div>
-								 </div>
-								 <div class="form-group">
-								    <label class="col-md-6 control-label label-form">Gallary Pic 4</label>
-								    <div class="col-md-6">
-								      <input type="file" >
-								    </div>
-								 </div>
-								 <div class="form-group">
-								    <label class="col-md-6 control-label label-form">Gallary Pic 5</label>
-								    <div class="col-md-6">
-								      <input type="file" >
-								    </div>
-								 </div>
-								 <div class="form-group">
-								    <label class="col-md-6 control-label label-form">Gallary Pic 6</label>
-								    <div class="col-md-6">
-								      <input type="file" >
-								    </div>
-								 </div>
-								 <div class="form-group">
-								    <label class="col-md-6 control-label label-form">Gallary Pic 7</label>
-								    <div class="col-md-6">
-								      <input type="file" >
-								    </div>
-								 </div>
-								 <div class="form-group">
-								    <label class="col-md-6 control-label label-form">Gallary Pic 8</label>
-								    <div class="col-md-6">
-								      <input type="file" >
-								    </div>
-								 </div>
-								 <div class="form-group">
-								    <label class="col-md-6 control-label label-form">Gallary Pic 9</label>
-								    <div class="col-md-6">
-								      <input type="file" >
-								    </div>
-								 </div>
-								 <div class="form-group">
-								    <label class="col-md-6 control-label label-form">Gallary Pic 10</label>
-								    <div class="col-md-6">
-								      <input type="file" >
-								    </div>
-								 </div>
-								 <div class="form-group">
-								 	<button class="btn btn-primary btn-custom">Submit</button>
+                                    <button class="btn btn-primary btn-custom">Submit</button>
+                                    <button type="button" class="btn btn-warning btn-custom" id="add_img">Add Another</button>
 								 </div>
 							</form>
 						</div><!-- form-container -->

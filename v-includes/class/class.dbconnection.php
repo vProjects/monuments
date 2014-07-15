@@ -3,7 +3,7 @@ class dbconnnection{
 	protected $db_conn;
 	var $host = 'localhost';
 	var $db_user = 'root';
-	var $db_pass = '';
+	var $db_pass = 'root';
 	var $db_name = 'livingmonument';
 	/**
 	* @secure_connection is used to secure the connectivity of the database 
